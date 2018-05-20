@@ -27,7 +27,7 @@ namespace SIGGRAPH_2018 {
 
 		public Controller Controller;
 
-		public NeuralNetwork NN;
+        public NeuralNetwork NN;
 
 		private Actor Actor;
 		private Trajectory Trajectory;
@@ -85,7 +85,7 @@ namespace SIGGRAPH_2018 {
 		}
 
 		void Start() {
-			Utility.SetFPS(60);
+            Utility.SetFPS(60);
 		}
 
 		void Update() {
@@ -101,7 +101,7 @@ namespace SIGGRAPH_2018 {
 				Animate();
 			}
 
-			transform.position = Trajectory.Points[RootPointIndex].GetPosition();
+            transform.position = Trajectory.Points[RootPointIndex].GetPosition();
 		}
 
 		private void PredictTrajectory() {
@@ -462,5 +462,24 @@ namespace SIGGRAPH_2018 {
 			}
 		}
 		#endif
+
+        //public static Transform[][] Retarget(Transform[][] recording, Avatar recordingAvatar, Avatar targetAvatar) {
+            
+        //}
+
+        //public static AnimationPipeline() {
+        //    Transform[time][i_bone] recording = RecordingOfLAActorWalkingForwardForFiveSeconds();
+        //    Avatar laActor = MeasurementsOfLAActor();
+        //    Avatar kirby = GetAvatarFrom3DModel("Kirby");
+
+        //    // to implement "kirby walks forward for 5 seconds"
+        //    Transform[][] kirbyWalkCycle = Retarget(recording, laActor, kirby);
+
+        //    Transform[][] adamRecording = new Transform[1][AdamJoins.Length];
+        //    // Do AI4Animation stuff, saving everything that you would do to adam to adamRecording[0][0...AdamJoins.Length] instead
+        //    Transform[][] newMotion = Retarget(adamRecording, adamAvatar, kirbyAvtar)
+        //        // Immediately apply the new motion to the kirby 3d model
+        //        HumanPoseHandler
+        //}
 	}
 }
